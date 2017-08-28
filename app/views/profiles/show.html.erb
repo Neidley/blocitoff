@@ -6,6 +6,11 @@
     <table>
       <tr>
         <td><%= item.name %></td>
+        <% if Time.now < item.created_at + 7.days %>
+          <td><%= "#{distance_of_time_in_words(item.created_at + 7.days, Time.now, include_seconds: true)}" +  " left" %></td>
+        <% else %>
+          <td> Times Up! </td>
+        <% end %>
         <td><%= link_to "Delete", item, method: :delete, class: 'glyphicon glyphicon-ok' %></td>
       <tr>
     </table>
