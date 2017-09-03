@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
-  resources :items, only: [:create, :new, :destroy]
+  mount_devise_token_auth_for 'User', at: 'auth'
+  resources :items, only: [:create, :new, :destroy, :index]
 
   get 'welcome/index'
 
@@ -7,6 +8,6 @@ Rails.application.routes.draw do
 
   root 'profiles#show'
 
-  devise_for :users
+  # devise_for :users
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

@@ -4,6 +4,11 @@ class ItemsController < ApplicationController
     @item = Item.new
   end
 
+  def index
+    @items = Item.all
+    render json: @items
+  end
+
   def create
     @item = Item.new
     @item.name = params[:item][:name]
