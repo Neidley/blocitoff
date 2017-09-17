@@ -12,7 +12,7 @@ class ItemsController < ApplicationController
   def create
     @item = Item.new
     @item.name = params[:item][:name]
-    @item.user = current_user
+    @item.user = current_user || User.first
 
     if @item.save!
       flash[:notice] = "Item was saved."
