@@ -13,6 +13,7 @@ class ItemsController < ApplicationController
     @item = Item.new
     @item.name = params[:item][:name]
     @item.user = current_user || User.first
+    @item.completed = false
 
     if @item.save!
       flash[:notice] = "Item was saved."
