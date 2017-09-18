@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   mount_devise_token_auth_for 'User', at: 'auth'
-  resources :items, only: [:create, :new, :destroy, :index]
+  resources :items, only: [:create, :new, :destroy, :index, :update]
 
   get 'welcome/index'
 
