@@ -26,14 +26,12 @@ class ItemsController < ApplicationController
 
   def update
     @item = Item.find(params[:id])
-    @item.completed = true || false
+    @item.completed = params[:completed]
 
-    if @item.save!
-      flash[:notice] = "Item was saved."
-      redirect_to root_path
+    if @item.save
+      render json: @item
     else
-      flash.now[:alert] = "There was an error saving the item. Please try again."
-      render root_path
+      render json: @item.errors
     end
   end
 
