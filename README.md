@@ -2,25 +2,53 @@
 
 Made with my mentor at [Bloc](http://bloc.io).
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+We built the Frontend using AngularJS and Backend implemented using Rails as an API.
 
-Things you may want to cover:
 
-* Ruby version
+### General Overview
 
-* System dependencies
+Build an application that allows users to create self-destructing to-do lists.
 
-* Configuration
 
-* Database creation
+### User Stories:
 
-* Database initialization
+**View Active Tasks**
 
-* How to run the test suite
+    As a user, I want to see my active tasks in a list as my default view
 
-* Services (job queues, cache servers, search engines, etc.)
+**Hide Old Tasks**
 
-* Deployment instructions
+    As a user, I want completed tasks and tasks older than seven days hidden from my main task views automatically
 
-* ...
+**View Past Tasks**
+
+    As a user, I want expired and completed tasks presented in a separate view
+
+**Create New Tasks**
+
+    As a user, I want to submit new tasks with a description, priority level, and three states: expired, completed or active
+
+**Mark Tasks Complete**
+
+    As a user, I want to mark tasks as complete
+
+**User Sign Up**
+
+**User Sign in and Out**
+
+**User Profile**
+
+**Create To-Do Items**
+
+**Seeding Data**
+
+**Mark To-Do Items as Complete**
+
+**Displaying Time Remaining**
+
+**Delete Expired To-Do Items**
+
+
+### Tech used:
+
+  Ruby on Rails / Angular
